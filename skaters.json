@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Tony Hawk",
+    "air": 8,
+    "speed": 5,
+    "balance": 6,
+    "image_path": "/images/TonyHawk.png"
+  },
+  {"name": "Rune Glifberg",
+  "air": 4,
+  "speed": 7,
+  "balance": 8,
+  "image_path": "images/RuneGlifberg.png"
+  },
+  {"name": "Bob Burnquist",
+  "air": 9,
+    "speed": 4,
+    "balance": 8,
+    "image_path": "images/BobBurnquist.png"
+  }
+]

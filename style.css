@@ -1,0 +1,59 @@
+h1{
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 4rem;
+  color: white;
+  text-shadow: 0 0 5px black;
+  text-transform: uppercase;
+}
+h3{
+  text-align: center;
+  font-family: sans-serif;
+  color: yellow;
+  text-transform: uppercase;
+  font-size: 2em;
+}
+
+html{
+  height: 100%;
+  background-image: url('https://i.imgur.com/hcFt6lJ.jpeg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  
+}
+
+
+li{
+   color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-shadow: 0 0 5px black;
+  
+}
+
+li a:hover{
+  background-color: yellow;
+}
+
+#like_button_container{
+  text-align: end;
+ 
+}
+
+
+.column {
+float: left;
+width: 30%;
+  background-color: black;
+  opacity: 76%;
+  margin: 1%;
+}
+/* The floats after the columns are cleared */
+.row:after {
+content: “”;
+display: table;
+clear: both;
+}

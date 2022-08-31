@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>React Import External JSON</title>
+   
+  <meta charset="UTF-8" />
+ 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- load React - note when deploying, replace "development.js" with "rpoduction,min.js" -->
+   <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js">
+
+  </script>
+ 
+<link rel="stylesheet" href="style.css" /> 
+</head>
+  
+<body>
+  <h1>Select Skater!</h1>
+  
+  
+  <div id="myApp"></div>
+  
+  
+
+
+  
+  <script type="text/babel">
+    "use strict";
+      function ProjectList(props){
+      console.log(props);
+        //return some output for the component using JSX
+    return <div>
+   {
+              // use map() to loop thru array passed in props.list, creating new element for each array value
+              props.list.map( 
+                (item,index) => (
+                <div class="row">
+                  <div key={index} class="column">
+                  
+                    <h3>
+                      {item.name}
+                    </h3>
+                <img src={item.image_path} alt={item.name} />
+
+                 <h6>Stats:</h6>
+                   <ul>
+    <li>Air: {item.air}</li>
+    <li>Speed: {item.speed}</li>
+    <li>Balance: {item.balance}</li>
+  </ul>
+               
+                  
+               
+    </div>            
+  </div>
+                )
+              )
+            }
+         </div>;
+}
+    //use jQuery to load the JSON data from our server
+    $.getJSON("x", function(jsonFromJquery){
+    const myRoot =  ReactDOM.createRoot(document.getElementById('myApp'));
+    
+    myRoot.render(
+    <ProjectList list = {jsonFromJquery} />
+    );
+    }
+    );
+      
+  </script>
+ 
+</body>
+</html>
